@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "\r\n"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n<h2>Here are some links to help you start: </h2>\n<ul>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://github.com/angular/angular-cli/wiki\">CLI Documentation</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2>\n  </li>\n</ul>\n\n"
+module.exports = "<app-top-navigation></app-top-navigation>\n<app-cursoral></app-cursoral>"
 
 /***/ }),
 
@@ -65,8 +65,12 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
-        this.title = 'architecture';
+        this.flag = false;
+        this.title = 'bootstrap-project';
     }
+    AppComponent.prototype.changeFlag = function () {
+        this.flag = !this.flag;
+    };
     AppComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-root',
@@ -94,6 +98,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var test_library__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! test-library */ "./node_modules/test-library/fesm5/test-library.js");
+/* harmony import */ var _test_test_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./test/test.component */ "./src/app/test/test.component.ts");
+/* harmony import */ var ngx_pagination__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-pagination */ "./node_modules/ngx-pagination/dist/ngx-pagination.js");
+/* harmony import */ var _top_nav_top_navigation_top_navigation_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./top-nav/top-navigation/top-navigation.component */ "./src/app/top-nav/top-navigation/top-navigation.component.ts");
+/* harmony import */ var _cursoral_cursoral_cursoral_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./cursoral/cursoral/cursoral.component */ "./src/app/cursoral/cursoral/cursoral.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -103,22 +112,223 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
+
+
+
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
+                _test_test_component__WEBPACK_IMPORTED_MODULE_4__["TestComponent"],
+                _top_nav_top_navigation_top_navigation_component__WEBPACK_IMPORTED_MODULE_6__["TopNavigationComponent"],
+                _cursoral_cursoral_cursoral_component__WEBPACK_IMPORTED_MODULE_7__["CursoralComponent"]
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"]
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+                test_library__WEBPACK_IMPORTED_MODULE_3__["TestLibraryModule"],
+                ngx_pagination__WEBPACK_IMPORTED_MODULE_5__["NgxPaginationModule"]
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/cursoral/cursoral/cursoral.component.css":
+/*!**********************************************************!*\
+  !*** ./src/app/cursoral/cursoral/cursoral.component.css ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/cursoral/cursoral/cursoral.component.html":
+/*!***********************************************************!*\
+  !*** ./src/app/cursoral/cursoral/cursoral.component.html ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div id=\"carouselExampleIndicators\" class=\"carousel slide test\" data-ride=\"carousel\">\n  <ol class=\"carousel-indicators\">\n    <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"0\" class=\"active\"></li>\n    <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"1\"></li>\n    <li data-target=\"#carouselExampleIndicators\" data-slide-to=\"2\"></li>\n  </ol>\n  <div class=\"carousel-inner\">\n      <div class=\"carousel-item active\">\n          <img class=\"d-block w-100\" src=\"../../../assets/one.jpg\" alt=\"First slide\">\n        </div>\n    <div class=\"carousel-item \">\n      <img class=\"d-block w-100\" src=\"../../../assets/photo-1495431088732-09e59535d241.jpg\" alt=\"Third slide\">\n    </div>\n    <div class=\"carousel-item\">\n      <img class=\"d-block w-100\" src=\"../../../assets/photo-1456611984355-c05be968ebe9.jpg\" alt=\"Second slide\">\n    </div>\n   \n  </div> \n  <a class=\"carousel-control-prev\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"prev\">\n    <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n    <span class=\"sr-only\">Previous</span>\n  </a>\n  <a class=\"carousel-control-next\" href=\"#carouselExampleIndicators\" role=\"button\" data-slide=\"next\">\n    <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n    <span class=\"sr-only\">Next</span>\n  </a>\n</div>\n<!-- <div class=\"carousel slide\" data-ride=\"carousel\">\n  <div class=\"carousel-inner bg-info\" role=\"listbox\">\n        <div class=\"carousel-item active\">\n            <div class=\"d-flex align-items-center justify-content-center min-vh-100\">\n                <h1 class=\"display-1\">ONE</h1>\n            </div>\n        </div>\n  </div>\n</div> -->"
+
+/***/ }),
+
+/***/ "./src/app/cursoral/cursoral/cursoral.component.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/cursoral/cursoral/cursoral.component.ts ***!
+  \*********************************************************/
+/*! exports provided: CursoralComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CursoralComponent", function() { return CursoralComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var CursoralComponent = /** @class */ (function () {
+    function CursoralComponent() {
+    }
+    CursoralComponent.prototype.ngOnInit = function () {
+    };
+    CursoralComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-cursoral',
+            template: __webpack_require__(/*! ./cursoral.component.html */ "./src/app/cursoral/cursoral/cursoral.component.html"),
+            styles: [__webpack_require__(/*! ./cursoral.component.css */ "./src/app/cursoral/cursoral/cursoral.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], CursoralComponent);
+    return CursoralComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/test/test.component.css":
+/*!*****************************************!*\
+  !*** ./src/app/test/test.component.css ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".test{\r\n  margin: 50px auto auto;\r\n  width: 500px;\r\n  border: 1px solid black;\r\n  box-shadow: 5px 10px 8px #888;\r\n}\r\n"
+
+/***/ }),
+
+/***/ "./src/app/test/test.component.html":
+/*!******************************************!*\
+  !*** ./src/app/test/test.component.html ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"test\">\n  <div *ngFor=\"let car of cars| paginate: { itemsPerPage: 5, currentPage: p }\">\n    <p>{{car}}</p>\n    <hr>\n  </div>\n  <pagination-controls (pageChange)=\"p = $event\"></pagination-controls>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/test/test.component.ts":
+/*!****************************************!*\
+  !*** ./src/app/test/test.component.ts ***!
+  \****************************************/
+/*! exports provided: TestComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TestComponent", function() { return TestComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var TestComponent = /** @class */ (function () {
+    function TestComponent() {
+        this.p = 1;
+        this.cars = ['Saab', 'Volvo', 'BMW', 'Saab', 'Volvo', 'BMW', 'Saab', 'Volvo', 'BMW', 'Saab', 'Volvo', 'BMW', 'Saab', 'Volvo', 'BMW'];
+    }
+    TestComponent.prototype.ngOnInit = function () {
+    };
+    TestComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-test',
+            template: __webpack_require__(/*! ./test.component.html */ "./src/app/test/test.component.html"),
+            styles: [__webpack_require__(/*! ./test.component.css */ "./src/app/test/test.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], TestComponent);
+    return TestComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/top-nav/top-navigation/top-navigation.component.css":
+/*!*********************************************************************!*\
+  !*** ./src/app/top-nav/top-navigation/top-navigation.component.css ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "./src/app/top-nav/top-navigation/top-navigation.component.html":
+/*!**********************************************************************!*\
+  !*** ./src/app/top-nav/top-navigation/top-navigation.component.html ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<nav class=\"navbar navbar-expand-md navbar-dark bg-dark sticky-top\">\n  <div class=\"container-fluid\">\n    <a class=\"navbar-brand\" href=\"#\">RIARCH</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n        <span class=\"navbar-toggler-icon\"></span>\n     </button>\n     <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n       <ul class=\"navbar-nav ml-auto\">\n         <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"#\">About</a>\n          </li>\n          <li class=\"nav-item\">\n              <a class=\"nav-link\" href=\"#\">Services</a>\n          </li>\n          <li class=\"nav-item\">\n              <a class=\"nav-link\" href=\"#\">Team</a>\n          </li>\n          <li class=\"nav-item\">\n              <a class=\"nav-link\" href=\"#\">Connect</a>\n          </li>\n       </ul>\n     </div>\n  </div>\n</nav> \n\n"
+
+/***/ }),
+
+/***/ "./src/app/top-nav/top-navigation/top-navigation.component.ts":
+/*!********************************************************************!*\
+  !*** ./src/app/top-nav/top-navigation/top-navigation.component.ts ***!
+  \********************************************************************/
+/*! exports provided: TopNavigationComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TopNavigationComponent", function() { return TopNavigationComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var TopNavigationComponent = /** @class */ (function () {
+    function TopNavigationComponent() {
+    }
+    TopNavigationComponent.prototype.ngOnInit = function () {
+    };
+    TopNavigationComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-top-navigation',
+            template: __webpack_require__(/*! ./top-navigation.component.html */ "./src/app/top-nav/top-navigation/top-navigation.component.html"),
+            styles: [__webpack_require__(/*! ./top-navigation.component.css */ "./src/app/top-nav/top-navigation/top-navigation.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], TopNavigationComponent);
+    return TopNavigationComponent;
 }());
 
 
@@ -186,7 +396,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\dantu\Development\architecture\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\dantu\Development\bootstrap-project\src\main.ts */"./src/main.ts");
 
 
 /***/ })
